@@ -1,0 +1,11 @@
+.SocialsNetworks {
+    margin-top: 17px;
+}
+
+.SocialsNetworks svg {
+    fill: var(--color-primary);
+    margin-right: 8px;
+    height: 1.063rem;
+    width: 1.063rem;
+    object-fit: contain;
+}

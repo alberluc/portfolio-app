@@ -1,0 +1,44 @@
+.Title-1 {
+    font-size: 1.5rem;
+}
+
+.Title-3 {
+    font-size: 1.125rem;
+}
+
+.Title-4 {
+    font-size: 0.875rem;
+}
+
+.Title-5 {
+    font-size: 0.75rem;
+}
+
+.Title-300 {
+    font-weight: 300;
+}
+
+.Title-700 {
+    font-weight: 700;
+}
+
+.Title-display {
+    font-family: var(--font-display);
+}
+
+.Title-primary {
+    color: var(--color-primary);
+}
+
+.Title-secondary {
+    color: var(--color-secondary);
+}
+
+.Title-text {
+    font-family: var(--font-text);
+}
+
+.Title-4-page {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}

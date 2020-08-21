@@ -1,0 +1,109 @@
+.Projects {
+    flex-basis: 100%;
+    margin-top: 2.625rem;
+}
+
+.Projects-filters {
+    position: absolute;
+    right: 5rem;
+    top: 5rem;
+}
+
+.Projects-filters-cell {
+    display: inline-block;
+}
+.Projects-filters-cell:not(:first-child) {
+    margin-left: 0.438rem;
+}
+
+.Projects {
+    display: grid;
+    grid-auto-columns: calc(9.188rem * 1.1);
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: calc(10.125rem * 1.3);
+    grid-gap: 1.875rem;
+}
+
+.Project {
+    --padding: 0.9rem;
+    --transition-duration: 300ms;
+    --transition-timing-function: ease-in;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding: var(--padding);
+    border-radius: 3px;
+    background-color: var(--color-secondary);
+}
+
+.Project-image {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.Project-main {
+    opacity: 0;
+    position: relative;
+    z-index: 10;
+    transition-property: opacity, transform;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+    transform: translateY(3px);
+}
+
+.Project:after {
+    content: close-quote;
+    display: block;
+    position: absolute;
+    z-index: 7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition-duration: calc(var(--transition-duration) / 2);
+    transition-timing-function: var(--transition-timing-function);
+    transition-property: background-color;
+}
+
+.Project-duration {
+    position: absolute;
+    right: calc(var(--padding) * -1);
+    top: -2.5rem;
+    padding: 3px 5px;
+    border-top-left-radius: 3px;
+    background-color: var(--color-primary);
+    color: var(--color-quaternary);
+}
+
+.Project:hover:after {
+    background-color: var(--color-secondary-light);
+}
+.Project:hover .Project-main {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Project-link {
+    /*position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: var(--padding);*/
+}

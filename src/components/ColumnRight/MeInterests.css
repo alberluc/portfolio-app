@@ -1,0 +1,26 @@
+.Interest {
+    display: flex;
+    align-items: center;
+}
+.Interest:not(:last-child) {
+    margin-bottom: 1.563rem;
+}
+
+.Interest-image {
+    width: 3.938rem;
+    height: 3.938rem;
+    margin-right: 2rem;
+    border-radius: 50%;
+    border: solid 1px var(--color-primary);
+    background-color: var(--color-quaternary);
+    object-fit: contain;
+}
+
+.Interest-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.Interest-title {
+    margin-bottom: 0.313rem;
+}

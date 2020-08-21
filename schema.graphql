@@ -1,0 +1,275 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+union ProjectContext = Experience | Study
+
+type Auth {
+    token: String!
+    user: User!
+}
+
+type Company {
+    _id: ID!
+    imagePath: String!
+    location: String!
+    name: String!
+    webSiteUrl: String!
+}
+
+type Experience {
+    _id: ID!
+    company: Company!
+    description: String!
+    from: DateTime!
+    name: String!
+    to: DateTime!
+}
+
+type GalleryItem {
+    file: String!
+    position: Int!
+}
+
+type Interest {
+    _id: ID!
+    description: String!
+    imagePath: String!
+    name: String!
+}
+
+type Mutation {
+    createCompany(input: CreateCompanyInput!): Company
+    createExperience(input: CreateExperienceInput!): Experience
+    createInterest(input: CreateInterestInput!): Interest
+    createProject(input: CreateProjectInput!): Project
+    createSchool(input: CreateSchoolInput!): School
+    createSkill(input: CreateSkillInput!): Skill
+    createStudy(input: CreateStudyInput!): Study
+    createText(input: CreateTextInput!): Text
+    deleteCompany(_id: ID!): Boolean
+    deleteExperience(_id: ID!): Boolean
+    deleteInterest(_id: ID!): Boolean
+    deleteProject(_id: ID!): Boolean
+    deleteSchool(_id: ID!): Boolean
+    deleteSkill(_id: ID!): Boolean
+    deleteStudy(_id: ID!): Boolean
+    deleteText(_id: ID!): Boolean
+    loginUser(input: LoginUserInput!): Auth
+    registerUser(input: RegisterUserInput!): Auth
+    updateCompany(_id: ID!, input: UpdateCompanyInput!): Company
+    updateExperience(_id: ID!, input: UpdateExperienceInput!): Experience
+    updateInterest(_id: ID!, input: UpdateInterestInput!): Interest
+    updateProject(_id: ID!, input: UpdateProjectInput!): Project
+    updateSchool(_id: ID!, input: UpdateSchoolInput!): School
+    updateSkill(_id: ID!, input: UpdateSkillInput!): Skill
+    updateStudy(_id: ID!, input: UpdateStudyInput!): Study
+    updateText(_id: ID!, input: UpdateTextInput!): Text
+}
+
+type Project {
+    _id: ID!
+    context: ProjectContext
+    description: String
+    duration: Int!
+    gallery: [GalleryItem]
+    imagePath: String!
+    name: String!
+    skills: [Skill]
+}
+
+type Query {
+    getCompanies: [Company]
+    getCompany(_id: ID!): Company
+    getExperience(_id: ID!): Experience
+    getExperiences: [Experience]
+    getInterest(_id: ID!): Interest
+    getInterests: [Interest]
+    getMe(token: String!): User
+    getProject(_id: ID!): Project
+    getProjects: [Project]
+    getSchool(_id: ID!): School
+    getSchools: [School]
+    getSkill(_id: ID!): Skill
+    getSkills: [Skill]
+    getStudies: [Study]
+    getStudy(_id: ID!): Study
+    getText(_id: ID!): Text
+    getTexts: [Text]
+}
+
+type School {
+    _id: ID!
+    location: String!
+    name: String!
+}
+
+type Skill {
+    _id: ID!
+    imagePath: String!
+    level: Int!
+    name: String!
+}
+
+type Study {
+    _id: ID!
+    degree: Int!
+    fromYear: Int!
+    name: String!
+    school: School!
+    toYear: Int!
+}
+
+type Text {
+    _id: ID!
+    code: String!
+    content: String!
+}
+
+type User {
+    _id: ID!
+    pseudo: String
+}
+
+enum ProjectContextType {
+    Experience
+    Personal
+    Study
+}
+
+input CreateCompanyInput {
+    image: Upload
+    location: String
+    name: String
+    webSiteUrl: String
+}
+
+input CreateExperienceInput {
+    companyId: ID
+    description: String
+    from: DateTime
+    name: String
+    to: DateTime
+}
+
+input CreateInterestInput {
+    description: String
+    image: Upload
+    name: String
+}
+
+input CreateProjectInput {
+    contextId: ID
+    contextType: ProjectContextType
+    description: String
+    duration: Int
+    image: Upload
+    name: String
+    skillsIds: [ID]
+}
+
+input CreateSchoolInput {
+    location: String
+    name: String
+}
+
+input CreateSkillInput {
+    image: Upload
+    level: Int
+    name: String
+}
+
+input CreateStudyInput {
+    degree: Int
+    fromYear: Int
+    name: String
+    schoolId: ID
+    toYear: Int
+}
+
+input CreateTextInput {
+    code: String
+    content: String
+}
+
+input GalleryItemInput {
+    file: Upload
+    filePath: String
+    position: Int!
+}
+
+input LoginUserInput {
+    password: String
+    pseudo: String
+}
+
+input RegisterUserInput {
+    password: String
+    pseudo: String
+}
+
+input UpdateCompanyInput {
+    image: Upload
+    location: String
+    name: String
+    webSiteUrl: String
+}
+
+input UpdateExperienceInput {
+    companyId: ID
+    description: String
+    from: DateTime
+    name: String
+    to: DateTime
+}
+
+input UpdateInterestInput {
+    description: String
+    image: Upload
+    name: String
+}
+
+input UpdateProjectInput {
+    contextId: ID
+    contextType: ProjectContextType
+    description: String
+    duration: Int
+    gallery: [GalleryItemInput]
+    image: Upload
+    name: String
+    skillsIds: [ID]
+}
+
+input UpdateSchoolInput {
+    location: String
+    name: String
+}
+
+input UpdateSkillInput {
+    image: Upload
+    level: Int
+    name: String
+}
+
+input UpdateStudyInput {
+    degree: Int
+    fromYear: Int
+    name: String
+    schoolId: ID
+    toYear: Int
+}
+
+input UpdateTextInput {
+    code: String
+    content: String
+}
+
+
+"The `DateTime` scalar represents a date and time following the ISO 8601 standard"
+scalar DateTime
+
+"The `Upload` scalar type represents a file upload."
+scalar Upload

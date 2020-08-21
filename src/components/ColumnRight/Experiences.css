@@ -1,0 +1,51 @@
+.Experience-imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    background: var(--color-quaternary);
+    box-shadow: var(--light-box-shadow);
+}
+
+.Experiences {
+    margin-top: 4rem;
+    flex-basis: 100%;
+}
+
+.Experience {
+    display: grid;
+    grid-template-columns: 1fr 5.5rem;
+}
+.Experience:not(:first-child) {
+    margin-top: 2.75rem;
+}
+
+.Experience-name {
+    margin-top: 0.188rem;
+}
+
+.Experience-description {
+    margin-top: 1.25rem;
+    margin-bottom: 1.625rem;
+}
+
+.Experience-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin-right: 2.125rem;
+    padding: 1.063rem;
+    background: var(--color-quaternary);
+    box-shadow: var(--light-box-shadow);
+    border-radius: 3px;
+}
+
+.Experience-image {
+    display: block;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}

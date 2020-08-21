@@ -1,0 +1,27 @@
+.Select {
+    padding: 0.375rem 1.6rem 0.375rem 0.375rem;
+    background: var(--color-quaternary);
+    border: 1px solid var(--color-primary);
+    box-sizing: border-box;
+    border-radius: 3px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.Select-container {
+    display: inline-block;
+    position: relative;
+}
+
+.Select-container:after {
+    content: close-quote;
+    display: block;
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 0;
+    border-right: solid 10px var(--color-primary);
+    border-left: solid 10px transparent;
+    border-top: solid 10px transparent;
+    transform: translate(-50%) rotate(45deg);
+}

@@ -1,0 +1,116 @@
+.Studies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 100%;
+    position: relative;
+    margin-top: 3rem;
+}
+
+.Studies-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.438rem;
+    height: 3.438rem;
+    position: relative;
+    z-index: 1;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+.Studies-line {
+    content: close-quote;
+    display: block;
+    position: absolute;
+    width: 3px;
+    top: 0;
+    bottom: -5rem;
+    background-color: var(--color-primary);
+}
+
+.Studies-list {
+    margin-top: 3.563rem;
+}
+
+.Study {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 16.063rem;
+    height: 6.313rem;
+    padding: 1.063rem;
+    background: var(--color-quaternary);
+    box-shadow: var(--light-box-shadow);
+    border-radius: 3px;
+}
+.Study:after {
+    content: close-quote;
+    display: block;
+    height: 3px;
+    width: 2.438rem;
+    position: absolute;
+    top: 50%;
+    background-color: var(--color-primary);
+}
+.Study:before {
+    content: close-quote;
+    display: block;
+    height: 0.688rem;
+    width: 0.688rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    background-color: var(--color-primary);
+}
+.Study:nth-child(odd) {
+    transform: translateX(calc(-50% - 2.438rem));
+}
+.Study:nth-child(odd):before {
+    right: 0;
+    transform: translate(calc(2.438rem + 50%), -50%);
+}
+.Study:nth-child(odd):after {
+    right: 0;
+    transform: translate(2.438rem, -50%);
+}
+.Study:nth-child(even) {
+    transform: translateX(calc(50% + 2.438rem));
+}
+.Study:nth-child(even):before {
+    left: 0;
+    transform: translate(calc(-2.438rem - 50%), -50%);
+}
+.Study:nth-child(even):after {
+    left: 0;
+    transform: translate(-2.438rem, -50%);
+}
+
+.Study-degree {
+    position: absolute;
+    top: 50%;
+}
+.Study:nth-child(odd) .Study-degree {
+    right: 0;
+    transform: translate(calc(2.438rem + 100% + 1.2rem), -50%);
+}
+.Study:nth-child(even) .Study-degree {
+    left: 0;
+    transform: translate(calc(-2.438rem - 100% - 1.2rem), -50%);
+}
+
+.Study {
+    opacity: 0;
+}
+
+.Study-animation-enter {
+    opacity: 0;
+}
+.Study-animation-enter-active {
+    opacity: 1;
+    transition: opacity 700ms;
+}
+.Study-animation-enter-done {
+    opacity: 1;
+}

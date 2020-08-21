@@ -1,0 +1,6 @@
+.Label {
+    font-family: var(--font-text);
+    font-weight: 300;
+    font-size: 0.563rem;
+    color: var(--color-primary);
+}

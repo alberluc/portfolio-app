@@ -1,0 +1,10 @@
+.Header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.Header-data {
+    margin-left: 34px;
+}

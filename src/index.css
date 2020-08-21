@@ -1,13 +1,41 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Yeseva+One&display=swap');
+
+:root {
+  --font-display: 'Yeseva One', cursive;
+  --font-text: 'Rubik', sans-serif;
+  --color-primary: rgba(0, 15, 96, 1);
+  --color-primary-light: rgba(0, 15, 96, .6);
+  --color-secondary: #D2E4FF;
+  --color-secondary-light: rgba(210, 228, 255, 0.85);
+  --color-tertiary: #F3FBFF;
+  --color-quaternary: #FFF;
+  --light-box-shadow: 2px 2px 10px #EBF3FF;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+html {
+  font-size: 18px;
+}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
 }

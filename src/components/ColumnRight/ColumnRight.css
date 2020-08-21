@@ -1,0 +1,26 @@
+.ColumnRight {
+    /*display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;*/
+    position: relative;
+    overflow: auto;
+    width: 60%;
+    background-image: url("../../images/Bulles.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 85%;
+    background-color: var(--color-tertiary);
+    padding: 5rem;
+}
+
+.ColumnRight-title {
+    /*margin-bottom: 2.5rem;*/
+}
+.ColumnRight-title:after {
+    content: close-quote;
+    display: block;
+    height: 0.188rem;
+    width: 5rem;
+    background-color: var(--color-primary);
+    margin-top: 0.375rem;
+}

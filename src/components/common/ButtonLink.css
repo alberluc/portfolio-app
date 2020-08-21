@@ -1,0 +1,11 @@
+.ButtonLink > a {
+    display: inline;
+    padding: 0.188rem;
+    background: var(--color-primary);
+    border-radius: 3px;
+    font-family: var(--font-text);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.563rem;
+    color: var(--color-quaternary);
+}
