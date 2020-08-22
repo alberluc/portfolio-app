@@ -10,11 +10,11 @@ export function Experiences() {
   const {data: {getExperiences} = {}} = useQuery(GET_EXPERIENCES)
   return (
     <div className="Experiences">
-      {getExperiences?.map(({company, ...experience}) => {
+      {getExperiences?.map(({company, ...experience}, index) => {
         const startDate = moment(experience.from);
         const endDate = moment(experience.to);
         return (
-          <div className="Experience">
+          <div key={index} className="Experience">
             <div className="Experience-data">
               <Title level={3} font="display" color="primary">{company.name}</Title>
               <Title className="Experience-name" level={5} font="text" color="primary" weight={300}>{experience.name}</Title>

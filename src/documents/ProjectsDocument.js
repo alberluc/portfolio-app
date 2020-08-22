@@ -7,6 +7,20 @@ export const GET_PROJECT = gql`
             description
             duration
             imagePath
+            context {
+                ... on Study {
+                    name
+                    school {
+                        name
+                    }
+                }
+                ... on Experience {
+                    name
+                    company {
+                        name
+                    }
+                }
+            }
             skills {
                 name
             }

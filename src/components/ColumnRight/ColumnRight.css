@@ -1,7 +1,7 @@
 .ColumnRight {
-    /*display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-evenly;*/
+    /*justify-content: space-evenly;*/
     position: relative;
     overflow: auto;
     width: 60%;

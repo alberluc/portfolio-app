@@ -1,0 +1,50 @@
+.ProjectItem-header {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    height: 14.75rem;
+    margin-top: 2.25rem;
+}
+
+.ProjectItem-gallery {
+    overflow: hidden;
+    height: 100%;
+    border-radius: 0.188rem;
+}
+
+.ProjectItem-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ProjectItem-data {
+    margin-left: 1.688rem;
+}
+
+.ProjectItem-duration {
+    margin-top: 0.563rem;
+}
+
+.ProjectItem-description {
+    margin-top: 1.625rem;
+    padding: 1.313rem 1.188rem;
+    background-color: var(--color-quaternary);
+    border-radius: 0.188rem;
+}
+
+.ProjectItem-skills {
+    display: flex;
+    margin-top: 1.625rem;
+}
+
+.ProjectItem-skillsItem {
+    padding: 0.313rem 0.813rem;
+    border-radius: 2.063rem;
+    color: var(--color-quaternary);
+    background-color: var(--color-primary);
+}
+
+.ProjectItem-skillsItem:not(:first-child) {
+    margin-left: 0.688rem;
+}
