@@ -110,6 +110,7 @@ type School {
 type Skill {
     _id: ID!
     imagePath: String!
+    isFavorite: Boolean!
     level: Int!
     name: String!
 }
@@ -178,6 +179,7 @@ input CreateSchoolInput {
 
 input CreateSkillInput {
     image: Upload
+    isFavorite: Boolean
     level: Int
     name: String
 }
@@ -250,6 +252,7 @@ input UpdateSchoolInput {
 
 input UpdateSkillInput {
     image: Upload
+    isFavorite: Boolean
     level: Int
     name: String
 }

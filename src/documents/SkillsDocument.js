@@ -4,8 +4,9 @@ export const GET_SKILLS = gql`
     query GetSkills {
         skills: getSkills {
             name
-            imagePath
             level
+            isFavorite
+            imagePath
         }
     }
 `
