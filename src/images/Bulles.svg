@@ -1,8 +1,8 @@
 <svg width="583" height="643" viewBox="0 0 583 643" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle opacity="0.2" cx="64" cy="56" r="56" fill="#D2E4FF"/>
-<ellipse opacity="0.6" cx="106.5" cy="77" rx="40.5" ry="40" fill="#D2E4FF"/>
-<circle opacity="0.2" cx="495.895" cy="327.895" r="71.4433" transform="rotate(104.321 495.895 327.895)" fill="#D2E4FF"/>
-<ellipse opacity="0.6" cx="457.627" cy="365.988" rx="56" ry="55.5" transform="rotate(104.321 457.627 365.988)" fill="#D2E4FF"/>
-<circle opacity="0.2" cx="88.7619" cy="553.762" r="69.0598" transform="rotate(-69.6548 88.7619 553.762)" fill="#D2E4FF"/>
-<ellipse opacity="0.6" cx="141.605" cy="533.818" rx="40.4138" ry="40.053" transform="rotate(-69.6548 141.605 533.818)" fill="#D2E4FF"/>
+<circle class="dot-light" opacity="0.2" cx="64" cy="56" r="56"/>
+<ellipse class="dot-normal" opacity="0.6" cx="106.5" cy="77" rx="40.5" ry="40"/>
+<circle class="dot-light" opacity="0.2" cx="495.895" cy="327.895" r="71.4433" transform="rotate(104.321 495.895 327.895)"/>
+<ellipse class="dot-normal" opacity="0.6" cx="457.627" cy="365.988" rx="56" ry="55.5" transform="rotate(104.321 457.627 365.988)"/>
+<circle class="dot-light" opacity="0.2" cx="88.7619" cy="553.762" r="69.0598" transform="rotate(-69.6548 88.7619 553.762)"/>
+<ellipse class="dot-normal" opacity="0.6" cx="141.605" cy="533.818" rx="40.4138" ry="40.053" transform="rotate(-69.6548 141.605 533.818)"/>
 </svg>

@@ -1,16 +1,34 @@
 .ColumnRight {
+    position: relative;
+    overflow: hidden;
+    width: 60%;
+    background-color: var(--color-tertiary);
+}
+
+.ColumnRight-dots {
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    right: 0;
+    top: 50%;
+    width: 60%;
+    fill: var(--color-secondary);
+    transform: translateY(-50%) scale(1.3);
+}
+
+.ColumnRight-content {
     display: flex;
     flex-direction: column;
-    /*justify-content: space-evenly;*/
     position: relative;
+    z-index: 6;
     overflow: auto;
-    width: 60%;
-    background-image: url("../../images/Bulles.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 85%;
-    background-color: var(--color-tertiary);
     padding: 5rem;
+}
+
+.ColumnRight-returnLink {
+    position: absolute;
+    left: calc(5rem - 1.5rem);
+    transform: translateX(-100%);
 }
 
 .ColumnRight-title {

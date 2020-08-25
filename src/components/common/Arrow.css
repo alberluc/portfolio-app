@@ -9,11 +9,18 @@
     border: none;
     transition: 500ms opacity;
 }
+.Arrow > svg {
+    fill: var(--color-primary);
+}
 .Arrow:disabled {
     opacity: .4;
 }
 .Arrow:focus {
     outline: none;
+}
+
+.Arrow-left {
+    transform: rotate(90deg);
 }
 
 .Arrow-up {

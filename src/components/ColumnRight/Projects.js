@@ -27,7 +27,7 @@ export function Projects() {
       </div>
       <div className="Projects">
         {projects?.map(project => (
-          <Link className="Project-link" to={`/projects/${project._id}`}>
+          <Link key={project._id} className="Project-link" to={`/projects/${project._id}`}>
             <article className="Project">
               <img className="Project-image" src={project.imagePath} alt={project.name}/>
               <main className="Project-main">

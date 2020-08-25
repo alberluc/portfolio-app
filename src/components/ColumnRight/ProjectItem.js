@@ -9,15 +9,28 @@ import {Title} from "../common/Title"
 
 export function ProjectItem() {
   const match = useRouteMatch()
-  const {setTitle} = useContext(ColumnRightContext)
+  const {setTitle, setReturnTo} = useContext(ColumnRightContext)
   const {data: {getProject} = {}} = useQuery(GET_PROJECT, {
     variables: {
       _id: match.params.id
     }
   })
   
-  useEffect(() => {if (getProject) setTitle(getProject.name)}, [getProject, setTitle])
-  
+  useEffect(
+    () => {
+      if (getProject) setTitle(getProject.name)
+    },
+    [getProject, setTitle]
+  )
+
+  useEffect(
+    () => {
+      setReturnTo({pathname: "/projects"})
+      return () => setReturnTo(null)
+    },
+    [setReturnTo]
+  )
+
   if (!getProject) return null
   
   return (
