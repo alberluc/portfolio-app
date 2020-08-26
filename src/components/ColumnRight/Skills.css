@@ -48,4 +48,11 @@
     height: 0.536rem;
     border-radius: 10px;
     background-color: var(--color-primary);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 700ms;
+}
+
+.SkillItem-animation-enter-done .SkillItem-level:after {
+    transform: scaleX(1);
 }

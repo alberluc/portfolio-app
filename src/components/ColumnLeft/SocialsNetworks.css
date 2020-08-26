@@ -2,6 +2,43 @@
     margin-top: 17px;
 }
 
+.SocialsNetworks > a[data-tooltip] {
+    position: relative;
+}
+
+.SocialsNetworks > a[data-tooltip]:before {
+    content: close-quote;
+    position: absolute;
+    left: calc(50% - 4px);
+    top: calc(100% + .3rem);
+    opacity: 0;
+    width: .2rem;
+    height: .2rem;
+    border-left: solid 1px var(--color-primary);
+    border-top: solid 1px var(--color-primary);
+    transform: translateX(-50%) rotate(45deg);
+    transition: opacity 300ms ease-in;
+}
+
+.SocialsNetworks > a[data-tooltip]:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: calc(50% - 4px);
+    top: calc(100% + .7rem);
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 300ms ease-in;
+    font-family: var(--font-text);
+    font-weight: 300;
+    font-size: 0.563rem;
+    color: var(--color-primary);
+}
+
+.SocialsNetworks > a[data-tooltip]:hover:before,
+.SocialsNetworks > a[data-tooltip]:hover:after {
+    opacity: 1;
+}
+
 .SocialsNetworks svg {
     fill: var(--color-primary);
     margin-right: 8px;
