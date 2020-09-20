@@ -4,6 +4,7 @@
 }
 
 .Projects-filters {
+    display: none;
     position: absolute;
     right: 5rem;
     top: 5rem;

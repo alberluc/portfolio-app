@@ -114,3 +114,37 @@
 .Study-animation-enter-done {
     opacity: 1;
 }
+
+/* Responsive */
+
+.App-phone .Studies {
+    position: absolute;
+    left: -9px;
+    margin-top: 5rem;
+}
+
+.App-phone .Study {
+    transform: translateX(calc(50% + 2.438rem));
+}
+.App-phone .Study:not(:last-child) {
+    margin-bottom: 1.3rem;
+}
+
+.App-phone .Study:before {
+    left: 0;
+    transform: translate(calc(-2.438rem - 50%), -50%);
+}
+.App-phone .Study:after {
+    left: 0;
+    transform: translate(-2.438rem, -50%);
+}
+
+.App-phone .Study-degree {
+    position: absolute;
+    top: 50%;
+}
+.App-phone .Study .Study-degree {
+    left: 0;
+    right: auto;
+    transform: translate(calc(-2.438rem - 100% - 1.2rem), -50%);
+}

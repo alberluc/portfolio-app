@@ -5,3 +5,12 @@
     width: 40%;
     padding: 4.688rem 3.125rem;
 }
+
+.App-phone .ColumnLeft {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding: 1rem;
+    justify-content: center;
+    box-shadow: var(--light-box-shadow);
+}

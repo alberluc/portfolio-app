@@ -56,3 +56,7 @@
 .SkillItem-animation-enter-done .SkillItem-level:after {
     transform: scaleX(1);
 }
+
+.App-phone .Skills-list {
+    grid-template-columns: repeat(2, 1fr);
+}

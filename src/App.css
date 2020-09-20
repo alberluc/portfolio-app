@@ -3,3 +3,22 @@
     min-height: 100%;
     height: 100%;
 }
+
+.App-phone {
+    display: grid;
+    overflow: hidden;
+}
+
+.App-content {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    min-height: 100%;
+    height: 100%;
+    position: relative;
+    background-color: var(--color-quaternary);
+    transition: transform 500ms ease-in-out;
+}
+
+.is-menu-active .App-content {
+    transform: translateX(100%);
+}

@@ -6,5 +6,45 @@
 }
 
 .Header-data {
-    margin-left: 34px;
+    position: relative;
+    margin-left: 2.125rem;
+}
+
+.Header-menu {
+    cursor: pointer;
+    display: none;
+    width: 1.5rem;
+    height: 1.2rem;
+}
+
+.Header-menu-bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.App-phone .Header {
+    /*justify-content: center;*/
+    justify-content: space-around;
+}
+
+.App-phone .Header .SocialsNetworks {
+    display: grid;
+    margin-top: 0;
+}
+
+.App-phone .Header-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*margin-right: 2.125rem;*/
+}
+
+.App-phone .Header-data {
+    display: flex;
+    margin-left: 0;
+}
+
+.App-phone .Header-titles {
+    /*margin-right: 2.125rem;*/
 }

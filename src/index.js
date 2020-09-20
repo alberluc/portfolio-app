@@ -5,7 +5,8 @@ import {App} from './App';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import {TextsProvider} from "./contexts/textsContext"
 import * as moment from "moment"
-import 'moment/locale/fr'  // without this line it didn't work
+import 'moment/locale/fr'
+import {DeviceProvider} from "./contexts/deviceContext"  // without this line it didn't work
 
 moment.locale('fr')
 
@@ -17,7 +18,9 @@ const client = new ApolloClient({
 ReactDOM.render(
   <ApolloProvider client={client}>
     <TextsProvider>
-      <App />
+      <DeviceProvider>
+        <App />
+      </DeviceProvider>
     </TextsProvider>
   </ApolloProvider>,
   document.getElementById('root')

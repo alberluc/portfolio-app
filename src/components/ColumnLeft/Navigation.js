@@ -23,6 +23,7 @@ export function Navigation() {
       history.push(newItem.to)
     }
     setLastIndex(currentIndex)
+    document.body.classList.remove('is-menu-active')
   }
 
   const location = useLocation()
