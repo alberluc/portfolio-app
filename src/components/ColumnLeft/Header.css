@@ -24,7 +24,6 @@
 }
 
 .App-phone .Header {
-    /*justify-content: center;*/
     justify-content: space-around;
 }
 
@@ -37,7 +36,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /*margin-right: 2.125rem;*/
 }
 
 .App-phone .Header-data {
