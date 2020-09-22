@@ -13,7 +13,7 @@
 .SkillItem-image {
     width: 2.408rem;
     height: 2.408rem;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 50%;
     border: solid 1px var(--color-primary);
     margin-right: 0.8rem;
