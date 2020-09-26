@@ -108,3 +108,19 @@
     height: 100%;
     padding: var(--padding);*/
 }
+
+/* Animation */
+
+.Projects {
+    transition-property: opacity, transform;
+    transition-timing-function: ease-out;
+    transition-delay: calc(var(--index) * var(--animation-delay));
+    transition-duration: var(--animation-duration-normal);
+
+    transform: translateY(10px);
+    opacity: 0;
+}
+.Projects-animation-enter-done {
+    transform: translateY(0);
+    opacity: 1;
+}

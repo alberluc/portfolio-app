@@ -50,3 +50,19 @@
     height: 80%;
     object-fit: contain;
 }
+
+/* Animation */
+
+.Experience {
+    transition-property: opacity, transform;
+    transition-timing-function: ease-out;
+    transition-delay: calc(var(--index) * var(--animation-delay));
+    transition-duration: var(--animation-duration-normal);
+
+    transform: translateX(30px);
+    opacity: 0;
+}
+.Experience-animation-enter-done {
+    transform: translateX(0);
+    opacity: 1;
+}

@@ -5,6 +5,10 @@ export const GET_PROJECT = gql`
         getProject(_id: $_id) {
             name
             description
+            githubUrl
+            documentsUrl
+            webSiteUrl
+            startDate
             duration
             imagePath
             context {

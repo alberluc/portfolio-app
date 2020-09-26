@@ -24,7 +24,14 @@
 }
 
 .ProjectItem-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-left: 1.688rem;
+}
+
+.ProjectItem-duration:first-letter {
+    text-transform: capitalize;
 }
 
 .ProjectItem-duration {
@@ -52,4 +59,26 @@
 
 .ProjectItem-skillsItem:not(:first-child) {
     margin-left: 0.688rem;
+}
+
+.Project-externalLink {
+    display: flex;
+    align-items: center;
+}
+
+.Project-externalLink:hover {
+    text-decoration: underline;
+}
+
+.Project-externalLink:before {
+    content: close-quote;
+    display: block;
+    width: 1.063rem;
+    height: 1.063rem;
+    margin-right: 0.625rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+.Project-externalLink:not(:first-child) {
+    margin-top: 0.75rem;
 }

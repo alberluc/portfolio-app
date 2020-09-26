@@ -24,3 +24,22 @@
 .Interest-title {
     margin-bottom: 0.313rem;
 }
+
+/* Animation */
+
+.Interest {
+    opacity: 0;
+    transition-timing-function: ease-out;
+    transition-delay: calc(var(--index) * var(--animation-delay));
+    transition-duration: var(--animation-duration-normal);
+    transition-property: opacity;
+}
+.Interest-animation-enter {
+    opacity: 0;
+}
+.Interest-animation-enter {
+    opacity: 0;
+}
+.Interest-animation-enter-done {
+    opacity: 1;
+}

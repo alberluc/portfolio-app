@@ -17,14 +17,14 @@ export function Studies() {
         <StudyIcon/>
       </span>
       <div className="Studies-list">
-        {getStudies?.map((study, key) => (
+        {getStudies?.map((study, index) => (
           <CSSTransition
             in={startTransition}
-            timeout={700}
+            timeout={100}
             classNames="Study-animation"
-            key={key}
+            key={index}
           >
-            <div className="Study">
+            <div className="Study" style={{'--index': index}}>
               <Title level={4} font="text" color="primary">{study.name}</Title>
               <Title level={5} font="text" color="primary" weight={300}>
                 <span>De {study.fromYear} à {study.toYear}</span>

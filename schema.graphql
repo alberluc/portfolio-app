@@ -74,11 +74,15 @@ type Project {
     _id: ID!
     context: ProjectContext
     description: String
+    documentsUrl: String
     duration: Int!
     gallery: [GalleryItem]
+    githubUrl: String
     imagePath: String!
     name: String!
     skills: [Skill]
+    startDate: DateTime
+    webSiteUrl: String
 }
 
 type Query {
@@ -166,10 +170,14 @@ input CreateProjectInput {
     contextId: ID
     contextType: ProjectContextType
     description: String
+    documentsUrl: String
     duration: Int
+    githubUrl: String
     image: Upload
     name: String
     skillsIds: [ID]
+    startDate: DateTime
+    webSiteUrl: String
 }
 
 input CreateSchoolInput {
@@ -209,6 +217,7 @@ input LoginUserInput {
 }
 
 input RegisterUserInput {
+    authorization: String
     password: String
     pseudo: String
 }
@@ -238,11 +247,15 @@ input UpdateProjectInput {
     contextId: ID
     contextType: ProjectContextType
     description: String
+    documentsUrl: String
     duration: Int
     gallery: [GalleryItemInput]
+    githubUrl: String
     image: Upload
     name: String
     skillsIds: [ID]
+    startDate: DateTime
+    webSiteUrl: String
 }
 
 input UpdateSchoolInput {

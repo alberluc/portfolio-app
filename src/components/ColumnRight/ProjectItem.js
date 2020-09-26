@@ -6,6 +6,7 @@ import {ColumnRightContext} from "./ColumnRight"
 import "./ProjectItem.css"
 import {Text} from "../common/Text"
 import {Title} from "../common/Title"
+import moment from "moment"
 
 export function ProjectItem() {
   const match = useRouteMatch()
@@ -15,7 +16,7 @@ export function ProjectItem() {
       _id: match.params.id
     }
   })
-  
+
   useEffect(
     () => {
       if (getProject) setTitle(getProject.name)
@@ -32,7 +33,7 @@ export function ProjectItem() {
   )
 
   if (!getProject) return null
-  
+
   return (
     <div className="ProjectItem">
       <header className="ProjectItem-header">
@@ -40,17 +41,43 @@ export function ProjectItem() {
           <img className="ProjectItem-image" src={getProject.imagePath} alt={getProject.name}/>
         </div>
         <div className="ProjectItem-data">
-          <Title level={4} font="text" color="primary">
-            <span>{getProject.context.name}</span>
-            <span> à </span>
-            {getProject.context.__typename === 'Study' && (
-              <span>{getProject.context.school.name}</span>
+          <div className="ProjectItem-data-top">
+            <Title level={4} font="text" color="primary">
+              {!getProject.context && (
+                <span>Projet personnel</span>
+              )}
+              {!!getProject.context && (
+                <>
+                  <span>{getProject.context.name}</span>
+                  <span> à </span>
+                  {getProject.context.__typename === "Study" && (
+                    <span>{getProject.context.school.name}</span>
+                  )}
+                  {getProject.context.__typename === "Experience" && (
+                    <span>{getProject.context.company.name}</span>
+                  )}
+                </>
+              )}
+            </Title>
+            <Title className="ProjectItem-duration" level={5} font="text" weight={300} color="primary">{`${moment(getProject.startDate).format("MMMM YYYY")} - ${getProject.duration}`} mois</Title>
+          </div>
+          <div className="ProjectItem-data-bottom">
+            {!!getProject.githubUrl && (
+              <a className="Project-externalLink" href={getProject.githubUrl}>
+                <Title level={5} color="primary" weight={300} font="text">Lien vers le dossier Git</Title>
+              </a>
             )}
-            {getProject.context.__typename === 'Experience' && (
-              <span>{getProject.context.company.name}</span>
+            {!!getProject.documentsUrl && (
+              <a className="Project-externalLink" href={getProject.documentsUrl}>
+                <Title level={5} color="primary" weight={300} font="text">Lien vers les documents annexes</Title>
+              </a>
             )}
-          </Title>
-          <Title className="ProjectItem-duration" level={5} font="text" color="primary">{getProject.duration} mois</Title>
+            {!!getProject.webSiteUrl && (
+              <a className="Project-externalLink" href={getProject.webSiteUrl}>
+                <Title level={5} color="primary" weight={300} font="text">Lien vers le site web</Title>
+              </a>
+            )}
+          </div>
         </div>
       </header>
       <main>
