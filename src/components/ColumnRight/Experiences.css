@@ -70,9 +70,9 @@
 /* Responsive */
 
 .App-phone .Experience {
-    grid-template-columns: 1fr 3.5rem;
+    grid-template-columns: 1fr 4.1rem;
 }
 .App-phone .Experience-imageContainer {
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 4.1rem;
+    width: 4.1rem;
 }
