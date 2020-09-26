@@ -1,10 +1,12 @@
-import React, {useEffect, useState} from "react"
+import React, {useContext, useEffect, useState} from "react"
 import "./Navigation.css"
 import {Arrow} from "../common/Arrow"
 import {NavLink} from "react-router-dom"
 import {Title} from "../common/Title"
 import {useLocation, useHistory} from "react-router-dom"
 import {menus} from "../../config/menus"
+import {SocialsNetworks} from "./SocialsNetworks"
+import {DeviceContext} from "../../contexts/deviceContext"
 
 export function Navigation() {
 
@@ -30,6 +32,7 @@ export function Navigation() {
   const history = useHistory()
   const [lastIndex, setLastIndex] = useState(0)
   const [currentIndex, setCurrentIndex] = useState(0)
+  const {device} = useContext(DeviceContext)
   const isLastSelected = currentIndex === menus.length - 1
   const isFirstSelected = currentIndex === 0
 
@@ -55,6 +58,7 @@ export function Navigation() {
         disabled={isLastSelected}
         onClick={() => incrementIndex(1)}
       />
+      {device === 'phone' && <SocialsNetworks/>}
     </div>
   )
 }

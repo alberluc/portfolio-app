@@ -46,3 +46,10 @@
     width: 1.063rem;
     object-fit: contain;
 }
+
+/* Responsive */
+
+.App-phone .SocialsNetworks svg {
+    height: 1.3rem;
+    width: 1.3rem;
+}

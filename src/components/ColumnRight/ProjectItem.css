@@ -82,3 +82,13 @@
 .Project-externalLink:not(:first-child) {
     margin-top: 0.75rem;
 }
+
+/* Responsive */
+.App-phone .Project-externalLink:not(:first-child) {
+    margin-top: 0.2rem;
+}
+.App-phone .Project-externalLink:before {
+    width: .7rem;
+    height: .7rem;
+    margin-right: .5rem;
+}

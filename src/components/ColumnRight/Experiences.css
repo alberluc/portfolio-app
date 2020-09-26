@@ -66,3 +66,13 @@
     transform: translateX(0);
     opacity: 1;
 }
+
+/* Responsive */
+
+.App-phone .Experience {
+    grid-template-columns: 1fr 3.5rem;
+}
+.App-phone .Experience-imageContainer {
+    height: 3.5rem;
+    width: 3.5rem;
+}

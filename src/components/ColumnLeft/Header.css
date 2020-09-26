@@ -23,8 +23,16 @@
     background-color: var(--color-primary);
 }
 
+/* Responsive */
+
 .App-phone .Header {
-    justify-content: space-around;
+    /*justify-content: space-around;*/
+}
+.App-phone .Header > * {
+    margin-right: 1.5rem;
+}
+.App-phone .Header > *:first-child {
+    margin-left: .5rem;
 }
 
 .App-phone .Header .SocialsNetworks {

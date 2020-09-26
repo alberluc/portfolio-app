@@ -30,7 +30,6 @@ export function Header() {
         </div>
         {device !== 'phone' && <SocialsNetworks/>}
       </div>
-      {device === 'phone' && <SocialsNetworks/>}
     </header>
   )
 }

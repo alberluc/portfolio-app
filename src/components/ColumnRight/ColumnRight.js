@@ -30,6 +30,7 @@ export function ColumnRight() {
           {returnTo && (
             <Link className="ColumnRight-returnLink" to={returnTo}>
               <Arrow className="ColumnRight-return" direction="left"/>
+              <Title className="ColumnRight-return-label" level={4} font="text" color="primary">Retour</Title>
             </Link>
           )}
           <header id="main-switch-header">

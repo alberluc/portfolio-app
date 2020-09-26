@@ -64,17 +64,17 @@ export function ProjectItem() {
           <div className="ProjectItem-data-bottom">
             {!!getProject.githubUrl && (
               <a className="Project-externalLink" href={getProject.githubUrl}>
-                <Title level={5} color="primary" weight={300} font="text">Lien vers le dossier Git</Title>
+                <Title level={5} color="primary" weight={300} font="text">Dossier Git</Title>
               </a>
             )}
             {!!getProject.documentsUrl && (
               <a className="Project-externalLink" href={getProject.documentsUrl}>
-                <Title level={5} color="primary" weight={300} font="text">Lien vers les documents annexes</Title>
+                <Title level={5} color="primary" weight={300} font="text">Documents annexes</Title>
               </a>
             )}
             {!!getProject.webSiteUrl && (
               <a className="Project-externalLink" href={getProject.webSiteUrl}>
-                <Title level={5} color="primary" weight={300} font="text">Lien vers le site web</Title>
+                <Title level={5} color="primary" weight={300} font="text">Site web</Title>
               </a>
             )}
           </div>
