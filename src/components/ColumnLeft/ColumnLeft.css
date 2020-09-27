@@ -1,9 +1,28 @@
 .ColumnLeft {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 40%;
     padding: 4.688rem 3.125rem;
+    overflow: hidden;
+}
+
+.Wave-container {
+    position: absolute;
+    display: none;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.Wave-container > svg {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    fill: var(--color-tertiary);
+    transform: translateY(-50%);
 }
 
 .App-phone .ColumnLeft {
