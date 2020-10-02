@@ -24,10 +24,10 @@
 }
 
 .ProjectItem-data {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     margin-left: 1.688rem;
+}
+.ProjectItem-data-bottom {
+    margin-top: 2rem;
 }
 
 .ProjectItem-duration:first-letter {
