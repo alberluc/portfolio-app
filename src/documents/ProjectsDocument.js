@@ -10,7 +10,8 @@ export const GET_PROJECT = gql`
             webSiteUrl
             startDate
             duration
-            imagePath
+            tinyImagePath: imagePath(quality: TINY)
+            imagePath: imagePath(quality: NORMAL)
             context {
                 ... on Study {
                     name
@@ -40,7 +41,8 @@ export const GET_PROJECTS = gql`
             name
             description
             duration
-            imagePath
+            tinyImagePath: imagePath(quality: TINY)
+            imagePath: imagePath(quality: NORMAL)
             skills {
                 name
                 level

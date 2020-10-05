@@ -14,7 +14,7 @@ type Auth {
 
 type Company {
     _id: ID!
-    imagePath: String!
+    imagePath(quality: Quality): String!
     location: String!
     name: String!
     webSiteUrl: String!
@@ -37,7 +37,7 @@ type GalleryItem {
 type Interest {
     _id: ID!
     description: String!
-    imagePath: String!
+    imagePath(quality: Quality): String!
     name: String!
 }
 
@@ -78,7 +78,7 @@ type Project {
     duration: Int!
     gallery: [GalleryItem]
     githubUrl: String
-    imagePath: String!
+    imagePath(quality: Quality): String!
     name: String!
     skills: [Skill]
     startDate: DateTime
@@ -113,7 +113,7 @@ type School {
 
 type Skill {
     _id: ID!
-    imagePath: String!
+    imagePath(quality: Quality): String!
     isFavorite: Boolean!
     level: Int!
     name: String!
@@ -143,6 +143,11 @@ enum ProjectContextType {
     Experience
     Personal
     Study
+}
+
+enum Quality {
+    NORMAL
+    TINY
 }
 
 input CreateCompanyInput {

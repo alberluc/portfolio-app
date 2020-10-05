@@ -5,6 +5,7 @@ import {GET_SKILLS} from "../../documents/SkillsDocument"
 import {Title} from "../common/Title"
 import {useLoadingTransition} from "../../hooks/useLoadingTransition"
 import {CSSTransition} from "react-transition-group"
+import {ImageLoader} from "../common/ImageLoader"
 
 export function Skills() {
   const {data: {skills} = {}} = useQuery(GET_SKILLS)
@@ -23,7 +24,14 @@ export function Skills() {
       key={index}
     >
       <div className="SkillItem">
-        <img className="SkillItem-image" src={skill.imagePath} alt={skill.name}/>
+        <div className="SkillItem-imageWrapper">
+          <ImageLoader
+            className="SkillItem-image"
+            tiny={skill.tinyImagePath}
+            src={skill.imagePath}
+            alt={skill.name}
+          />
+        </div>
         <div className="SkillItem-data">
           <Title className="SkillItem-name" level={4} color="primary" font="text">{skill.name}</Title>
           <span className="SkillItem-level" style={{"--level": skill.level}}/>

@@ -6,6 +6,7 @@ import {Title} from "../common/Title"
 import {Text} from "../common/Text"
 import {useLoadingTransition} from "../../hooks/useLoadingTransition"
 import {CSSTransition} from "react-transition-group"
+import {ImageLoader} from "../common/ImageLoader"
 
 export function MeInterests() {
 
@@ -22,7 +23,14 @@ export function MeInterests() {
             classNames="Interest-animation"
           >
           <div className="Interest" style={{'--index': index}}>
-            <img className="Interest-image" src={interest.imagePath} alt={interest.name}/>
+            <div className="Interest-imageWrapper">
+              <ImageLoader
+                className="Interest-image"
+                tiny={interest.tinyImagePath}
+                src={interest.imagePath}
+                alt={interest.name}
+              />
+            </div>
             <div className="Interest-data">
               <Title className="Interest-title" level={4} color="primary" font="display">{interest.name}</Title>
               <Text className="Interest-description">{interest.description}</Text>

@@ -11,7 +11,8 @@ export const GET_EXPERIENCES = gql`
                 name
                 location
                 webSiteUrl
-                imagePath
+                tinyImagePath: imagePath(quality: TINY)
+                imagePath: imagePath(quality: NORMAL)
             }
         }
     }

@@ -6,7 +6,8 @@ export const GET_SKILLS = gql`
             name
             level
             isFavorite
-            imagePath
+            tinyImagePath: imagePath(quality: TINY)
+            imagePath: imagePath(quality: NORMAL)
         }
     }
 `

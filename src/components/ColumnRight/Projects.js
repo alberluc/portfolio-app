@@ -9,6 +9,7 @@ import {PrimaryLine} from "../common/PrimaryLine"
 import {Link} from "react-router-dom"
 import {useLoadingTransition} from "../../hooks/useLoadingTransition"
 import {CSSTransition} from "react-transition-group"
+import {ImageLoader} from "../common/ImageLoader"
 
 export function Projects() {
 
@@ -39,7 +40,12 @@ export function Projects() {
           {projects?.map(project => (
             <Link key={project._id} className="Project-link" to={`/projects/${project._id}`}>
               <article className="Project">
-                <img className="Project-image" src={project.imagePath} alt={project.name}/>
+                <ImageLoader
+                  className="Project-image"
+                  tiny={project.tinyImagePath}
+                  src={project.imagePath}
+                  alt={project.name}
+                />
                 <main className="Project-main">
                   <Title level={4} color="primary" font="display">{project.name}</Title>
                   <PrimaryLine/>

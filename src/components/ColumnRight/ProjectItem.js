@@ -7,6 +7,7 @@ import "./ProjectItem.css"
 import {Text} from "../common/Text"
 import {Title} from "../common/Title"
 import moment from "moment"
+import {ImageLoader} from "../common/ImageLoader"
 
 export function ProjectItem() {
   const match = useRouteMatch()
@@ -38,7 +39,12 @@ export function ProjectItem() {
     <div className="ProjectItem">
       <header className="ProjectItem-header">
         <div className="ProjectItem-gallery">
-          <img className="ProjectItem-image" src={getProject.imagePath} alt={getProject.name}/>
+          <ImageLoader
+            className="ProjectItem-image"
+            tiny={getProject.tinyImagePath}
+            src={getProject.imagePath}
+            alt={getProject.name}
+          />
         </div>
         <div className="ProjectItem-data">
           <div className="ProjectItem-data-top">
