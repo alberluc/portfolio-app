@@ -25,10 +25,10 @@
 
 .Experience-name {
     margin-top: 0.188rem;
+    margin-bottom: 1.25rem;
 }
 
 .Experience-description {
-    margin-top: 1.25rem;
     margin-bottom: 1.625rem;
 }
 
@@ -49,6 +49,13 @@
     width: 80%;
     height: 80%;
     object-fit: contain;
+}
+
+.Experience-showAction {
+    cursor: pointer;
+    position: absolute;
+    right: 1.063rem;
+    top: 1.063rem;
 }
 
 /* Animation */
