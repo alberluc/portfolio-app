@@ -4,18 +4,18 @@ import './ImageLoader.css'
 
 export function ImageLoader({tiny, src, alt, className, ...props}) {
 
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(false)
   const classList = useClassList([className, 'ImageLoader'])
 
   useEffect(() => {
     const image = new Image()
     image.src = src
-    image.onload = () => setIsLoading(true)
+    image.onload = () => setIsLoaded(true)
   }, [src])
 
-  if (!isLoading) classList.add('ImageLoader-tiny')
+  if (!isLoaded) classList.add('ImageLoader-tiny')
 
-  return !isLoading
+  return !isLoaded
     ? <img src={tiny} alt={alt} className={classList} {...props}/>
     : <img src={src} alt={alt} className={classList} {...props}/>
 }
