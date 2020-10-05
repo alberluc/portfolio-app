@@ -1,0 +1,9 @@
+.ImageLoader {
+    transition-property: filter;
+    transition-duration: var(--animation-duration-fast);
+    transition-timing-function: ease-out;
+}
+
+.ImageLoader-tiny {
+    filter: blur(1px);
+}
